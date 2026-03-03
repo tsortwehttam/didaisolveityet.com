@@ -66,6 +66,8 @@ function renderShell(meta: PageMeta, body: string): string {
     <meta name="twitter:description" content="${description}" />
     <meta name="twitter:image" content="${BASE_URL}${meta.ogImage ?? "/og.png"}" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"${SITE_NAME}","url":"${BASE_URL}"}</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDCTQ3C9F2"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDCTQ3C9F2');</script>
     <style>
       :root {
         color-scheme: light;
