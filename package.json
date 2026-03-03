@@ -1,0 +1,23 @@
+{
+  "name": "didaisolveityet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "yarn ts scripts/build.ts",
+    "ts": "npx tsx --",
+    "typecheck": "tsc --noEmit",
+    "test": "for f in $(find . -name '*.test.ts' -not -path '*/node_modules/*' -not -path './.next/*' | sort); do echo \"Running $f\"; npx tsx \"$f\" || exit 1; done",
+    "dev": "yarn build && npx serve dist",
+    "verify": "yarn typecheck && yarn test && yarn build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "satori": "^0.21.0",
+    "sharp": "^0.34.5"
+  }
+}
